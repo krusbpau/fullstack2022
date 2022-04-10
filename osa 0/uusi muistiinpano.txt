@@ -1,0 +1,34 @@
+title New note
+
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+palvelin-->selain: Redirection
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+palvelin-->selain: HTML-koodi
+
+note over palvelin:
+Palvelin vastaa HTTP POST-pyyntöön 
+uudelleenohjauspyynnöllä, selain tekee
+uuden HTTP GET-pyynnön osoitteeseen
+/notes
+end note
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+palvelin-->selain: main.css
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+palvelin-->selain: main.js
+
+note over selain:
+Selain aloittaa suorittamaan
+JavaScript-koodia, joka lataa
+JSON-muotoisen datan
+end note
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+palvelin-->selain: [{ content: "word", date: "2022-04-06" }, ...]
+
+note over selain:
+selain kutsuu tapahtumakäsittelijää, 
+muistiinpanot renderöityy näytölle
+end note
+
+

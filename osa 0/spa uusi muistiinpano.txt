@@ -1,0 +1,10 @@
+title SPA new note
+
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+palvelin-->selain: [{ content: "word", date: "2022-04-06"}, ...]
+
+note over selain:
+HTTP POST-pyyntö sisältää
+JSON-muodossa olevan datan,
+selain pysyy samalla sivulla.
+end note
